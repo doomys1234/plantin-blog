@@ -1,0 +1,20 @@
+
+.breadcrumbs {
+  display: flex;
+  &_item{
+    margin-right: 8px;
+    a{
+      color: #91A0B6;
+    }
+    span{
+      font-weight: 500;
+      color: #91A0B6;
+    }
+  }
+  &-name{
+    margin: 0px 8px;
+    &.disabled{
+      pointer-events: none;
+    }
+  }
+}

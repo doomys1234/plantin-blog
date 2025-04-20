@@ -1,0 +1,28 @@
+.nav_list{
+  @media screen and (min-width: 375px) and (max-width: 767px) {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 25px;
+    border-radius: 15px;
+
+  }
+  @media screen and (min-width: 768px){
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+  }
+  @media screen and (min-width: 1440px)  {
+    margin-left: 175px;
+  }
+}
+
+.nav_item a{
+  color:#262626;
+  @media screen and (min-width: 768px){
+    margin-right: 24px;
+  }
+}
