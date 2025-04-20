@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../../assets/logo.svg?react"
-import Union from "../../assets/union.svg?react"
+import Logo from "../../assets/icons/logo.svg?react"
+import Union from "../../assets/icons/union.svg?react"
 
 const SiteLogo:React.FC = () =>{
     return (

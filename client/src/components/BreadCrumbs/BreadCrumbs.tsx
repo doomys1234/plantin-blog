@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router";
-import ArrowSeparator from "../../assets/chevron_left.svg?react"
+import ArrowSeparator from "../../assets/icons/chevron_left.svg?react"
 import "./Breadcrumbs.scss";
 
 const Breadcrumbs: React.FC = () => {

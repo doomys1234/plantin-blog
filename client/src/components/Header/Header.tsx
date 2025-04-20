@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import NavBar from "../NavBar/NavBar.tsx";
 import SiteLogo from "../SiteLogo/SiteLogo.tsx";
-import Search from "../../assets/search.svg?react"
-import Menu from "../../assets/menu.svg?react"
-import Profile from "../../assets/profile.svg?react"
+import Search from "../../assets/icons/search.svg?react"
+import Menu from "../../assets/icons/menu.svg?react"
+import Profile from "../../assets/icons/profile.svg?react"
 import Button from "../Button/Button.tsx";
 import useIsMobile from "../../hooks/useIsMobile.tsx"
 import "./Header.scss"

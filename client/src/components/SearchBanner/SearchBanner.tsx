@@ -1,6 +1,6 @@
 import React from "react";
-import Search from "../../assets/search.svg?react"
-import SearchBarLogo from "../../assets/searchbar.svg?react"
+import Search from "../../assets/icons/search.svg?react"
+import SearchBarLogo from "../../assets/icons/searchbar.svg?react"
 import useIsMobile from "../../hooks/useIsMobile.tsx"
 import "./SearchBanner.scss"
 

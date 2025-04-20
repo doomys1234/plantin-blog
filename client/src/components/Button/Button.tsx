@@ -1,11 +1,7 @@
 
-import React, { ReactNode } from 'react';
+import React from 'react';
+import {ButtonProps} from '../../types/button-types.ts';
 import "./Button.scss"
-type ButtonProps = {
-    onClick?: () => void;
-    children: ReactNode;
-    className?: string;
-};
 
 const Button: React.FC<ButtonProps> = ({ onClick, children, className = '' }) => {
     return (
