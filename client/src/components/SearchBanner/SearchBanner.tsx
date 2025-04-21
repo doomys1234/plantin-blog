@@ -2,9 +2,14 @@ import React from "react";
 import Search from "../../assets/icons/search.svg?react"
 import SearchBarLogo from "../../assets/icons/searchbar.svg?react"
 import useIsMobile from "../../hooks/useIsMobile.tsx"
+import {ChangeEventHandler} from "react";
 import "./SearchBanner.scss"
 
-const SearchBanner:React.FC = () => {
+type SearchBannerProps = {
+    value: string,
+    onChange: ChangeEventHandler,
+}
+const SearchBanner:React.FC<SearchBannerProps> = ({value, onChange}) => {
     const isMobile = useIsMobile()
     return (
         <div className="search_banner">
@@ -22,7 +27,7 @@ const SearchBanner:React.FC = () => {
                     )}
                 </p>
                     <div className="search_banner-input-wrapper">
-                        <input id="search" className="search_banner-input" type="text" placeholder="Search"/>
+                        <input id="search" className="search_banner-input" type="text" placeholder="Search" value={value} onChange={onChange}/>
                         <Search className="search_banner-icon"/>
                     </div>
             </div>

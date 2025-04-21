@@ -1,4 +1,4 @@
-export type BlogCardProps = {
+export type BlogCard = {
     id: number;
     title: string;
     description: string;
@@ -10,13 +10,13 @@ export type BlogCardProps = {
 
 export type BlogControlProps = {
     title: string;
-    cards: BlogCardProps[];
+    cards: BlogCard[];
     layout: "single" | "double" | "grid";
 };
 
 export type BlogSection = {
     title: string;
-    cards: BlogCardProps[];
+    cards: BlogCard[];
 };
 
 export type BlogData={

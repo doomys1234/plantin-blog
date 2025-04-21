@@ -1,5 +1,5 @@
 import React from "react";
-import {BlogCardProps} from "../../types/blog-types.ts";
+import {BlogCard as BlogCardProps} from "../../types/blog-types.ts";
 import "./BlogCard.scss";
 const BlogCard: React.FC<BlogCardProps> = ({ title, description, date, readTime, image, isNew }) => {
     return (

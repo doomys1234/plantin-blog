@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 import { BlogData } from "../types/blog-types.ts";
 
 type BlogState = {
-    data: BlogData | null;
+    data: BlogData | [];
     loading: boolean;
     error: string | null;
 };
 
 const initialState: BlogState = {
-    data: null,
+    data: [],
     loading: false,
     error: null,
 };
