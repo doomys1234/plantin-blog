@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "concurrently \"npm run dev\" \"nodemon server/api/index.js\"",
+    "start": "concurrently \"npm run dev\" \"nodemon api/index.js\"",
 
     "build": "tsc -b && vite build",
     "lint": "eslint .",
