@@ -7,7 +7,7 @@ import {
 } from "./weatherSlice";
 
 function fetchWeatherApi() {
-    return axios.get<any>("https://plantin-blog-server.onrender.com/blog");
+    return axios.get<any>("https://plantin-blog-server.onrender.com/weather");
 }
 
 function* fetchWeatherSaga() {
