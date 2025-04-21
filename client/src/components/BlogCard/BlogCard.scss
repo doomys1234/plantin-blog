@@ -1,5 +1,6 @@
 .card{
   &_wrapper{
+    cursor: pointer;
     transition: transform 0.3s ease;
     &.special{
       display: flex;
