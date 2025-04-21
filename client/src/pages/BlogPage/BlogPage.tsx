@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useCallback} from "react";
 import {useSelector, useDispatch} from "react-redux";
-import {fetchBlogDataRequest} from "../../store/blogSlice.ts";
+import {fetchBlogDataRequest} from "../../store/blog/blogSlice.ts";
 import SearchBanner from "../../components/SearchBanner/SearchBanner.tsx";
 import {RootState, AppDispatch} from "../../store"
 import useFilteredBlogData from "../../hooks/useFilterBlogData.tsx"
@@ -19,7 +19,7 @@ const BlogPage: React.FC = () => {
     const onSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value), []);
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p className="text-red-500">{error}</p>;
+    if (error) return <p>{error}</p>;
     if (!data) return null;
 
     const layoutMap: Record<keyof typeof data, "single" | "double" | "grid"> = {

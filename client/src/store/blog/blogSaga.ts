@@ -4,8 +4,8 @@ import {
     fetchBlogDataRequest,
     fetchBlogDataSuccess,
     fetchBlogDataFailure,
-} from "./blogSlice";
-import {BlogDataResponse} from "../types/blog-types";
+} from "./blogSlice.ts";
+import {BlogDataResponse} from "../../types/blog-types.ts";
 
 function fetchBlogApi() {
     return axios.get<BlogDataResponse>("https://plantin-blog-server.onrender.com/blog");

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { BlogData } from "../types/blog-types.ts";
+import { BlogData } from "../../types/blog-types.ts";
 
 type BlogState = {
     data: BlogData | [];

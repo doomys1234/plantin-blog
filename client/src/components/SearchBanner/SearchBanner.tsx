@@ -1,16 +1,28 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Search from "../../assets/icons/search.svg?react"
 import SearchBarLogo from "../../assets/icons/searchbar.svg?react"
 import useIsMobile from "../../hooks/useIsMobile.tsx"
 import {ChangeEventHandler} from "react";
 import "./SearchBanner.scss"
-
+import {useDispatch, useSelector} from "react-redux";
+import {AppDispatch, RootState} from "../../store";
+import {fetchWeatherRequest} from "../../store/weather/weatherSlice.ts";
 type SearchBannerProps = {
     value: string,
     onChange: ChangeEventHandler,
 }
 const SearchBanner:React.FC<SearchBannerProps> = ({value, onChange}) => {
     const isMobile = useIsMobile()
+    const dispatch = useDispatch<AppDispatch>();
+    const { temperature, loading, error } = useSelector((state: RootState) => state.weather);
+    console.log(temperature)
+    useEffect(() => {
+        dispatch(fetchWeatherRequest());
+    }, [dispatch]);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>{error}</p>;
+
     return (
         <div className="search_banner">
             <div className="search_banner-wrapper">
@@ -23,7 +35,7 @@ const SearchBanner:React.FC<SearchBannerProps> = ({value, onChange}) => {
                             <strong>Tips & Tricks</strong> selected specially for <strong>you</strong>!
                         </>
                     ) : (
-                        <>Current temperature is: 24°C</>
+                        <>Current temperature is: {temperature}°C</>
                     )}
                 </p>
                     <div className="search_banner-input-wrapper">
