@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import {BlogData, BlogCard} from "../types/blog-types.ts";
+import {BlogData, BlogCard, BlogSection} from "../types/blog-types.ts";
 
 const useFilteredBlogData = (blogData: BlogData | [], searchWord: string): BlogCard[] | {} => {
     return useMemo(() => {
@@ -9,7 +9,7 @@ const useFilteredBlogData = (blogData: BlogData | [], searchWord: string): BlogC
 
         const lowerSearch = searchWord.toLowerCase();
 
-        const filteredData = {};
+        const filteredData: { [key in keyof BlogData]?: BlogSection } = {};
 
         for (const [key, section] of Object.entries(blogData)) {
             const filteredCards = section.cards.filter(card =>

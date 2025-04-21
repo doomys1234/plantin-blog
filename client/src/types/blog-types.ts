@@ -1,4 +1,5 @@
 export type BlogCard = {
+    cards: any;
     id: number;
     title: string;
     description: string;

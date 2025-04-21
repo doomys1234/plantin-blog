@@ -37,7 +37,7 @@ const BlogPage: React.FC = () => {
                     key={key}
                     title={section.title}
                     cards={section.cards}
-                    layout={layoutMap[key]}
+                    layout={layoutMap[key as keyof typeof layoutMap]}
                 />
             ))}
         </>
