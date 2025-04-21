@@ -4,12 +4,14 @@ import {BlogControlProps, BlogCardProps} from "../../types/blog-types.ts";
 import "./BlogControl.scss"
 
 const BlogControl: React.FC<BlogControlProps> = ({ title, cards, layout }) => {
+    const isNewSection = title === "New"
     return (
         <section className={`blog`}>
-            <h2 className={`blog_title ${title==="New"? "special":""}`}>{title}</h2>
-            <div className={`blog_wrapper ${layout === "grid" ? "grid-cols-3" : layout === "double" ? "grid-cols-2" : ""}`}>
+            {!isNewSection && <span className="blog_separator"></span>}
+            <h2 className={`blog_title ${isNewSection? "special":""}`}>{title}</h2>
+            <div className={`blog_wrapper ${layout}`}>
                 {cards.map((card:BlogCardProps) => (
-                    <BlogCard key={card.id} {...card} />
+                    <BlogCard key={card.id} {...card} isNew={isNewSection} />
                 ))}
             </div>
         </section>

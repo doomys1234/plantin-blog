@@ -24,7 +24,6 @@ const BlogPage: React.FC = () => {
     };
 
     const sections = Object.entries(data) as [keyof typeof data, typeof data["new"]][];
-    console.log('sections', sections);
     return (
         <>
             <SearchBanner/>

@@ -1,9 +1,20 @@
 .blog{
+  &_separator{
+    display: inline-block;
+    border-top: 1.5px solid #C4C4C4;
+    width: 100%;
+    margin-top: 23px;
+    @media screen and (min-width: 768px){
+      margin-top: 56px;
+    }
+  }
  &_wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+   @media screen and (min-width: 768px){
+   }
 }
 }
 
@@ -13,8 +24,8 @@
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
-  border-top: 1.5px solid #C4C4C4;
-  padding-top:8px;
+  margin-top:8px;
+  margin-bottom: 16px;
   &.special{
     border-top: none;
     text-transform: capitalize;
@@ -26,5 +37,31 @@
     font-weight: 600;
     border-radius: 4px;
     clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 50%, 100% 100%, 0 100%);
+  }
+}
+
+.blog_wrapper {
+  @media screen and (min-width: 768px){
+    display: grid;
+    gap: 32px;
+  }
+}
+
+/* Layout variants */
+.blog_wrapper.single {
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog_wrapper.double {
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.blog_wrapper.grid {
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }

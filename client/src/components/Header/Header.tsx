@@ -10,7 +10,6 @@ import "./Header.scss"
 const Header: React.FC = () => {
     const [showPopup, setShowPopup] = useState(false);
     const isMobile = useIsMobile();
-    console.log(isMobile);
     return (
         <div className="header">
             {isMobile && <SiteLogo/>}
