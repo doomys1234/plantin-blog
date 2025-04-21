@@ -6,8 +6,6 @@
   "scripts": {
     "dev": "vite",
     "start": "npm run dev",
-
-    "postinstall": "cd ../client && npm install && npm run build",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
