@@ -21,12 +21,10 @@ const SearchBanner:React.FC = () => {
                         <>Current temperature is: 24°C</>
                     )}
                 </p>
-                <div className="search_banner-form">
                     <div className="search_banner-input-wrapper">
                         <input id="search" className="search_banner-input" type="text" placeholder="Search"/>
                         <Search className="search_banner-icon"/>
                     </div>
-                </div>
             </div>
             {!isMobile && <SearchBarLogo className="search_banner-logo"/>}
         </div>

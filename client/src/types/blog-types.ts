@@ -19,8 +19,13 @@ export type BlogSection = {
     cards: BlogCardProps[];
 };
 
-export type BlogData = {
+export type BlogData={
     new: BlogSection;
     topOfTheDay: BlogSection;
     interesting: BlogSection;
+}
+
+export type BlogDataResponse = {
+   success: boolean;
+   data:BlogData;
 };

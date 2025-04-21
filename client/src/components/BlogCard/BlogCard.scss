@@ -1,0 +1,25 @@
+.card{
+  &_image{
+    min-width: 300px;
+    width: 100%;
+    margin-top: 16px;
+  }
+  &_date{
+    color:#ADB8C8;
+    margin-top: 16px;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  &_title{
+    color:#242424;
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 24px;
+
+  }
+  &_text{
+    color:#78787A;
+    margin: 8px 0;
+    font-size: 16px;
+  }
+}

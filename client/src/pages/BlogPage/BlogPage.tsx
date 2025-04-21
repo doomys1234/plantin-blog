@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from "react-redux";
 import {fetchBlogDataRequest} from "../../store/blogSlice.ts";
 import SearchBanner from "../../components/SearchBanner/SearchBanner.tsx";
 import {RootState, AppDispatch} from "../../store"
+import BlogControl from "../../components/BlogConrol/BlogControl.tsx";
 import "./BlogPage.scss"
 const BlogPage: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -15,10 +16,26 @@ const BlogPage: React.FC = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p className="text-red-500">{error}</p>;
     if (!data) return null;
-    console.log('data', data)
+
+    const layoutMap: Record<keyof typeof data, "single" | "double" | "grid"> = {
+        new: "single",
+        topOfTheDay: "double",
+        interesting: "grid",
+    };
+
+    const sections = Object.entries(data) as [keyof typeof data, typeof data["new"]][];
+    console.log('sections', sections);
     return (
         <>
             <SearchBanner/>
+            {sections.map(([key, section]) => (
+                <BlogControl
+                    key={key}
+                    title={section.title}
+                    cards={section.cards}
+                    layout={layoutMap[key]}
+                />
+            ))}
         </>
     )
 }

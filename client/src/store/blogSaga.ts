@@ -5,15 +5,15 @@ import {
     fetchBlogDataSuccess,
     fetchBlogDataFailure,
 } from "./blogSlice";
-import { BlogData } from "../types/blog-types";
+import {BlogDataResponse} from "../types/blog-types";
 
 function fetchBlogApi() {
-    return axios.get<BlogData>("/api/blog");
+    return axios.get<BlogDataResponse>("/api/blog");
 }
 
 function* fetchBlogSaga() {
     try {
-        const response:AxiosResponse<BlogData> = yield call(fetchBlogApi);
+        const response:AxiosResponse<BlogDataResponse> = yield call(fetchBlogApi);
         yield put(fetchBlogDataSuccess(response.data));
     } catch (error: any) {
         yield put(fetchBlogDataFailure(error.message || "Failed to load blog data"));

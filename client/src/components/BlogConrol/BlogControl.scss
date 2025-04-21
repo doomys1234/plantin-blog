@@ -1,0 +1,30 @@
+.blog{
+ &_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+}
+
+.blog_title{
+  color: #91A0B6;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  border-top: 1.5px solid #C4C4C4;
+  padding-top:8px;
+  &.special{
+    border-top: none;
+    text-transform: capitalize;
+    margin-top: 18px;
+    background: #ED685C;
+    color: white;
+    display: inline-block;
+    padding: 8px 25px;
+    font-weight: 600;
+    border-radius: 4px;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 50%, 100% 100%, 0 100%);
+  }
+}

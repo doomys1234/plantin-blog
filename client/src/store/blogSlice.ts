@@ -17,13 +17,13 @@ const blogSlice = createSlice({
     name: "blog",
     initialState,
     reducers: {
-        fetchBlogDataRequest: (state) => {
+        fetchBlogDataRequest: (state:BlogState) => {
             state.loading = true;
             state.error = null;
         },
-        fetchBlogDataSuccess: (state, action) => {
+        fetchBlogDataSuccess: (state:BlogState, action) => {
             state.loading = false;
-            state.data = action.payload;
+            state.data = action.payload.data;
         },
         fetchBlogDataFailure: (state, action) => {
             state.loading = false;

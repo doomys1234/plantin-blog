@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+p{
+  margin: 0;
+}
+
 nav{
   margin: 0;
 }
@@ -36,16 +40,10 @@ h1 {
   line-height: 1.1;
 }
 
-h2{
+h1,h2,h3{
   margin: 0;
 }
 
-/*@media (prefers-color-scheme: light) {*/
-/*  :root {*/
-/*    color: #213547;*/
-/*    background-color: #ffffff;*/
-/*  }*/
-/*  a:hover {*/
-/*    color: #747bff;*/
-/*  }*/
-/*}*/
+img{
+  display: block;
+}

@@ -35,13 +35,14 @@
     font-size: 14px;
     line-height: 20px;
   }
-  //&-form{
-  //  display: flex;
-  //}
   &-input{
     &-wrapper{
+      display: flex;
       position: relative;
       max-width: 522px;
+      @media screen and (min-width: 768px){
+        display: block;
+      }
     }
 
     margin-top: 10px;
