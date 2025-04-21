@@ -4,6 +4,7 @@ import React, {useEffect, useState, useCallback} from 'react';
 import Header from "../Header/Header.tsx";
 import Breadcrumbs from "../BreadCrumbs/BreadCrumbs.tsx";
 import SubscriptionBanner from "../SubscriptionBanner/SubscriptionBanner.tsx";
+import Footer from "../Footer/Footer..tsx";
 import "./RootComponent.scss"
 
 const RouterRoot:React.FC = () => {
@@ -28,6 +29,7 @@ const RouterRoot:React.FC = () => {
                     <SubscriptionBanner onClose={closeBanner} />
                 )}
             </main>
+            <Footer/>
         </>
     );
 };

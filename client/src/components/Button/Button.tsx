@@ -6,6 +6,7 @@ import "./Button.scss"
 const Button: React.FC<ButtonProps> = ({ onClick, children, className = '' }) => {
     return (
         <button
+            type="button"
             onClick={onClick}
             className={`button ${className}`}
         >

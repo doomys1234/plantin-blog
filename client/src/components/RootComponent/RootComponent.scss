@@ -1,5 +1,4 @@
 .main{
-  background-color: #f6f6f6;
   max-width: 1400px;
   margin: 0 auto;
   @media screen and (min-width: 300px){
@@ -9,6 +8,6 @@
     padding: 16px 40px;
   }
   @media screen and (min-width: 1400px) {
-    padding: 16px 183px;
+    padding: 16px 183px 80px 183px;
   }
 }

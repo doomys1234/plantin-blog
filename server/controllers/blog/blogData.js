@@ -88,6 +88,22 @@ export const blogData = {
                 date: "Feb 23",
                 readTime: "8 min read",
             },
+            {
+                id: 10,
+                title: "Professional Repot",
+                description: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage...",
+                image: "client/src/assets/images/int_image2.png",
+                date: "Feb 23",
+                readTime: "8 min read",
+            },
+            {
+                id: 11,
+                title: "Watering mastery",
+                description: "Repotting a plant can seem like a difficult task because a lot of things can go wrong – you can damage...",
+                image: "client/src/assets/images/int_image1.png",
+                date: "Feb 23",
+                readTime: "8 min read",
+            },
         ],
     },
 };

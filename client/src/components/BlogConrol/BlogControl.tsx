@@ -9,11 +9,11 @@ const BlogControl: React.FC<BlogControlProps> = ({ title, cards, layout }) => {
         <section className={`blog`}>
             {!isNewSection && <span className="blog_separator"></span>}
             <h2 className={`blog_title ${isNewSection? "special":""}`}>{title}</h2>
-            <div className={`blog_wrapper ${layout}`}>
+            <ul className={`blog_wrapper ${layout}`}>
                 {cards.map((card:BlogCardProps) => (
                     <BlogCard key={card.id} {...card} isNew={isNewSection} />
                 ))}
-            </div>
+            </ul>
         </section>
     );
 };

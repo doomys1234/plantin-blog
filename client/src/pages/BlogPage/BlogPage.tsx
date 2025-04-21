@@ -4,7 +4,7 @@ import {fetchBlogDataRequest} from "../../store/blogSlice.ts";
 import SearchBanner from "../../components/SearchBanner/SearchBanner.tsx";
 import {RootState, AppDispatch} from "../../store"
 import BlogControl from "../../components/BlogConrol/BlogControl.tsx";
-import "./BlogPage.scss"
+
 const BlogPage: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const { data, loading, error } = useSelector((state: RootState) => state.blog);

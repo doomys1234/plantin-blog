@@ -21,8 +21,25 @@
 }
 
 .nav_item a{
+  position: relative;
   color:#262626;
   @media screen and (min-width: 768px){
     margin-right: 24px;
   }
 }
+
+.nav_item a::after {
+  background-color: #04BF94;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav_item a:hover::after {
+width: 100%;
+}
+

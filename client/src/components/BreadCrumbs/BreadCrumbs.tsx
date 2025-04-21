@@ -13,16 +13,15 @@ const Breadcrumbs: React.FC = () => {
                 <li className="breadcrumbs_item">
                     <NavLink to="/">Home</NavLink>
                 </li>
-                {pathnames.map((segment, index) => {
+                {pathnames.map((pathname, index) => {
                     const fullPath = `/${pathnames.slice(0, index + 1).join("/")}`;
-                    const breadCrumbName =  segment[0].toUpperCase().concat(segment.slice(1))
                     const isLast = index === pathnames.length - 1;
                     return (
                         <li key={fullPath} className="breadcrumbs_item">
                             <ArrowSeparator/>
                             <NavLink
                                 className={`breadcrumbs-name ${isLast ? "disabled" : "enabled"}`}
-                                to={fullPath}>{breadCrumbName}</NavLink>
+                                to={fullPath}>{pathname}</NavLink>
                             <ArrowSeparator/>
                         </li>
                     );

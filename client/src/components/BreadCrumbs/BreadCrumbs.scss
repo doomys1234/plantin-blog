@@ -2,9 +2,13 @@
 .breadcrumbs {
   display: flex;
   &_item{
+    text-transform: capitalize;
     margin-right: 8px;
     a{
       color: #91A0B6;
+      &:hover{
+        color: #04BF94;
+      }
     }
     span{
       font-weight: 500;
@@ -14,6 +18,7 @@
   &-name{
     margin: 0 8px;
     &.disabled{
+      color: #04BF94;
       pointer-events: none;
     }
   }
