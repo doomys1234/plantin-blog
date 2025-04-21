@@ -2,11 +2,12 @@
   @media screen and (min-width: 375px) and (max-width: 767px) {
     position: absolute;
     top: 70px;
-    right: 0;
+    right: 10px;
     display: flex;
     flex-direction: column;
     padding: 10px 25px;
     border-radius: 15px;
+    background-color: #ffffff;
 
   }
   @media screen and (min-width: 768px){
@@ -23,20 +24,28 @@
 .nav_item a{
   position: relative;
   color:#262626;
+  @media screen and (max-width: 767px)  {
+    margin-bottom: 8px;
+  }
   @media screen and (min-width: 768px){
     margin-right: 24px;
   }
 }
 
+
 .nav_item a::after {
   background-color: #04BF94;
   content: "";
   position: absolute;
-  bottom: -10px;
   left: 0;
-  width: 0%;
+  bottom: -2px;
+  width: 0;
   height: 2px;
   transition: width 0.3s ease;
+  @media screen and (min-width: 768px){
+    bottom: -10px;
+
+  }
 }
 
 .nav_item a:hover::after {

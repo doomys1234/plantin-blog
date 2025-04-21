@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router';
 import RootComponent from "./components/RootComponent/RootComponent.tsx";
 import BlogPage from "./pages/BlogPage/BlogPage.tsx";
-import DiseasesPage from "./pages/DiseasesPage/DiseasesPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -11,7 +10,7 @@ const router = createBrowserRouter([
             { index: true, element: <BlogPage /> },
             { path: "discover", element: <BlogPage /> },
             { path: "my-plants", element: <BlogPage /> },
-            { path: "diseases", element: <DiseasesPage /> },
+            { path: "diseases", element: <BlogPage /> },
             { path: "blog", element: <BlogPage /> },
             { path: "faq", element: <BlogPage /> },
             { path: "contact-us", element: <BlogPage /> },

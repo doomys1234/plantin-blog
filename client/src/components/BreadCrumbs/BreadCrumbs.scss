@@ -6,6 +6,7 @@
     margin-right: 8px;
     a{
       color: #91A0B6;
+      transition: transform 0.3s ease;
       &:hover{
         color: #04BF94;
       }
