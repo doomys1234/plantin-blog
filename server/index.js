@@ -1,24 +1,17 @@
-// import * as http from 'node:http';
-import express from 'express';
-// import app from './app.js';
-const app = express()
-const port = process.env.PORT || 3000;
-app.use("/", (req,res)=>{
-    res.send("hello world server");
-})
+import * as http from 'node:http';
+import app from './app.js';
+const API_PORT = process.env.PORT || 3000;
 
-app.listen(port, console.log(`Server is running on PORT ${port}`))
-// const API_PORT = 3000;
+// app.listen(port, console.log(`Server is running on PORT ${port}`))
+(async function main() {
+    try {
+            const server = http.createServer({ maxHeaderSize: 1024 * 32 }, app);
+            server.listen(API_PORT, () => {
+                console.log(`The server is listening to port ${API_PORT}.`);
+            });
 
-// (async function main() {
-//     try {
-//             const server = http.createServer({ maxHeaderSize: 1024 * 32 }, app);
-//             server.listen(API_PORT, () => {
-//                 console.log(`The server is listening to port ${API_PORT}.`);
-//             });
-//
-//     } catch (error) {
-//         console.error(error.message);
-//         process.exit(1);
-//     }
-// }());
+    } catch (error) {
+        console.error(error.message);
+        process.exit(1);
+    }
+}());
