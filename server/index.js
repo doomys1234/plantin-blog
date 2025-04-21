@@ -1,5 +1,9 @@
 // import * as http from 'node:http';
-import app from './app.js';
+// import app from './app.js';
+import express from "express";
+
+const app = express()
+
 const API_PORT = process.env.PORT || 3000;
 app.use("/", (req,res)=>{
     res.send("hello world server");
