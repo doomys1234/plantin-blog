@@ -7,7 +7,10 @@ import * as AppRouter from "./routes/AppRouter.js";
 const app = express()
 
 const API_PORT = process.env.PORT || 3000;
-app.use(cors());
+app.use(cors({
+    origin: "https://plantin-blog.onrender.com",
+    optionsSuccessStatus: 200
+}));
 AppRouter.createRouter(app);
 
 // app.listen(API_PORT, console.log(`Server is running on PORT ${API_PORT}`))
