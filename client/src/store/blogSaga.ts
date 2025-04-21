@@ -8,7 +8,7 @@ import {
 import {BlogDataResponse} from "../types/blog-types";
 
 function fetchBlogApi() {
-    return axios.get<BlogDataResponse>("https://plantin-blog-server.vercel.app/api/blog");
+    return axios.get<BlogDataResponse>("/api/blog");
 }
 
 function* fetchBlogSaga() {
