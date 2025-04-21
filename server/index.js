@@ -2,12 +2,12 @@
 import express from 'express';
 import app from './app.js';
 const app = express()
-
+const port = process.env.PORT || 3000;
 app.use("/", (req,res)=>{
     res.send("hello world server");
 })
 
-app.listen(3000, console.log('Server is running on PORT 5000'))
+app.listen(port, console.log(`Server is running on PORT ${port}`))
 // const API_PORT = 3000;
 
 // (async function main() {
