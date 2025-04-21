@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "concurrently \"npm run dev\" \"nodemon api/index.js\"",
-
+    "start": "concurrently \"npm run dev\" \"nodemon server/index.js\"",
+    "postinstall": "cd ../client && npm install && npm run build",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
