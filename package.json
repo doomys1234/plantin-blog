@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "start": "concurrently \"npm run dev\" \"nodemon server/index.js\"",
+    "dev": "node api.js && vite",
+    "start": "node api.js && concurrently \"npm run dev\" \"nodemon server/index.js\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
