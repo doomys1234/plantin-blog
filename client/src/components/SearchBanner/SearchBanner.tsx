@@ -31,11 +31,13 @@ const SearchBanner:React.FC<SearchBannerProps> = ({value, onChange}) => {
                 </h2>
                 <p className="search_banner-text">
                     {isMobile ? (
-                        <>
-                            <strong>Tips & Tricks</strong> selected specially for <strong>you</strong>!
-                        </>
+                            <span>
+                                <strong>Tips & Tricks</strong> selected specially for <strong>you</strong>!
+                            </span>
                     ) : (
-                        <>Current temperature is: {temperature}°C</>
+                        <>
+                            {temperature && <span>Current temperature is: {Math.round(temperature)}°C</span>}
+                        </>
                     )}
                 </p>
                     <div className="search_banner-input-wrapper">
