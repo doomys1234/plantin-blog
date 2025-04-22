@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 type WeatherState = {
-    temperature: number | [];
+    temperature: number | null;
     loading: boolean;
     error: string | null;
 };
 
 const initialState: WeatherState = {
-    temperature: [],
+    temperature: null,
     loading: false,
     error: null,
 };
