@@ -21,7 +21,6 @@ const weatherSlice = createSlice({
             state.error = null;
         },
         fetchWeatherSuccess: (state:WeatherState, action) => {
-            console.log("fetchWeatherSuccess", action.payload);
             state.loading = false;
             state.temperature = action.payload.data.main.temp;
         },

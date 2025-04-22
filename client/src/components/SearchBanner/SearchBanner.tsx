@@ -15,7 +15,7 @@ const SearchBanner:React.FC<SearchBannerProps> = ({value, onChange}) => {
     const isMobile = useIsMobile()
     const dispatch = useDispatch<AppDispatch>();
     const { temperature, loading, error } = useSelector((state: RootState) => state.weather);
-    console.log(temperature)
+
     useEffect(() => {
         dispatch(fetchWeatherRequest());
     }, [dispatch]);
