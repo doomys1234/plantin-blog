@@ -13,8 +13,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-   @media screen and (min-width: 768px){
-   }
 }
 }
 
@@ -25,7 +23,10 @@
   line-height: 24px;
   text-transform: uppercase;
   margin-top:8px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  @media screen and (min-width: 768px){
+    margin-bottom: 16px;
+  }
   &.special{
     border-top: none;
     text-transform: capitalize;
@@ -47,7 +48,6 @@
   }
 }
 
-/* Layout variants */
 .blog_wrapper.single {
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr;

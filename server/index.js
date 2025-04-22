@@ -1,5 +1,4 @@
 import * as http from 'node:http';
-// import app from './app.js';
 import cors from "cors";
 import express from "express";
 import * as AppRouter from "./routes/AppRouter.js";
@@ -7,13 +6,9 @@ import * as AppRouter from "./routes/AppRouter.js";
 const app = express()
 
 const API_PORT = process.env.PORT || 3000;
-app.use(cors({
-    origin: "https://plantin-blog.onrender.com",
-    optionsSuccessStatus: 200
-}));
+app.use(cors());
 AppRouter.createRouter(app);
 
-// app.listen(API_PORT, console.log(`Server is running on PORT ${API_PORT}`))
 (async function main() {
     try {
             const server = http.createServer({ maxHeaderSize: 1024 * 32 }, app);

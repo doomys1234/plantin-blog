@@ -10,14 +10,16 @@ const navLinks = [
     { path: "/faq", label: "FAQ" },
     { path: "/contact-us", label: "Contact Us" },
 ];
-
-const NavBar: React.FC = () => {
+type NavBarProps = {
+    onNavBarClick: () => void;
+}
+const NavBar: React.FC<NavBarProps> = ({onNavBarClick}) => {
     return (
         <nav>
             <ul className="nav_list">
                 {navLinks.map((link) => (
                     <li className="nav_item" key={link.path}>
-                        <NavLink to={link.path}>{link.label}</NavLink>
+                        <NavLink to={link.path} onClick={onNavBarClick}>{link.label}</NavLink>
                     </li>
                 ))}
             </ul>

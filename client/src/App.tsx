@@ -14,8 +14,8 @@ const router = createBrowserRouter([
             { path: "blog", element: <BlogPage /> },
             { path: "faq", element: <BlogPage /> },
             { path: "contact-us", element: <BlogPage /> },
-            { path: "not-found", element: <Navigate to="/not-found" replace /> },
-            { path: "*", element: <Navigate to="/not-found" replace /> },
+            { path: "not-found", element: <Navigate to="/" replace /> },
+            { path: "*", element: <Navigate to="/" replace /> },
         ],
     },
 ]);

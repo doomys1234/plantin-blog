@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useCallback} from "react";
 import NavBar from "../NavBar/NavBar.tsx";
 import SiteLogo from "../SiteLogo/SiteLogo.tsx";
 import Search from "../../assets/icons/search.svg?react"
@@ -10,18 +10,19 @@ import "./Header.scss"
 const Header: React.FC = () => {
     const [showPopup, setShowPopup] = useState(false);
     const isMobile = useIsMobile();
+    const onNavBarClick = useCallback(()=> setShowPopup(!showPopup),[showPopup])
     return (
         <div className="header">
             {isMobile && <SiteLogo/>}
-            {(!isMobile || showPopup) && <NavBar/>}
+            {(!isMobile || showPopup) && <NavBar onNavBarClick={onNavBarClick} />}
             {isMobile ?
                 <div className="button_actions">
                 <Button className={"search_button"} onClick={() => console.log('SEARCH me')}><Search/></Button>
-                <Button className={"menu_button"} onClick={(): void => setShowPopup(!showPopup)}><Menu/></Button>
+                <Button className={"menu_button"} onClick={onNavBarClick}><Menu/></Button>
                 </div> : (
                     <div className="button_actions">
-                        <Button className={"search_button"} onClick={() => console.log('SEARCH me')}><Search/></Button>
-                        <Button className={"search_button"} onClick={() => console.log('SEARCH me')}><Profile/></Button>
+                        <Button className={"search_button"} onClick={() => console.log('Search Click')}><Search/></Button>
+                        <Button className={"search_button"} onClick={() => console.log('Profile Click')}><Profile/></Button>
                     </div>
                 )
             }

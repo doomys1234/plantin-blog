@@ -26,7 +26,7 @@ export default class BaseRouter {
     }
 
     getRoutes() {
-        console.log('should override')
+        throw Error('Child class should have a list of routes')
     }
 
 }
